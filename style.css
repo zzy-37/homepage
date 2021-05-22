@@ -1,0 +1,44 @@
+.logo {
+    width: 500px;
+    height: 500px;
+    position: relative;
+}
+
+.txt {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.dot {
+    position: absolute;
+    height: 10%;
+    width: 10%;
+    background-color: #00ffa2;
+    border-radius: 50%;
+}
+
+.d1 {
+    left: 1.5%;
+    top: 5%;
+}
+
+.d2 {
+    left: 42%;
+    top: 18%;
+}
+
+.d3 {
+    left: 42%;
+    top: 32%;
+}
+
+.d4 {
+    left: 79.2%;
+    top: 25.5%
+}
+
+.d5 {
+    left: 100%;
+    top: 5%;
+}
