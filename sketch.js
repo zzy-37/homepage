@@ -105,7 +105,7 @@ function draw() {
 
     // print(vs.length);
     fr.html(floor(frameRate()));
-    zoff += inc;
+    // zoff += inc;
 }
 
 function windowResized() {
