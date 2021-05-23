@@ -6,6 +6,27 @@ let zoff = 0;
 let fr;
 let vs = [];
 
+function drawText() {
+    background(240);
+
+    let lw = floor(width / scl);
+    let lh = floor(height / scl);
+
+    scale(scl);
+    noStroke();
+    
+    textFont("Montserrat");
+    textAlign(CENTER, CENTER);
+    // text("in:to", lw / 2, lh / 4);
+    text("in:to", lw / 2, lh / 2);
+    // text("in:to", lw / 2, (lh / 4) * 3);
+
+    // textFont("Noto Sans SC");
+    // textAlign(LEFT, CENTER);
+    // let txt = "普惠关怀 Inclusive Solicitude\n // 混合时空 Hybrid Space-\nTime // 焕新传承 Revitalized\nHeritage // 多元范式 Plural\nParadigm // 循环共⽣ Circu-\nlar Intergrowth //"
+    // text(txt, lw / 20, lh / 2);
+}
+
 function setup() {
     pixelDensity(1);
     // createCanvas(400, 400);
@@ -20,19 +41,7 @@ function setup() {
         vs.push(createVector(floor(random(width)), floor(random(height))));
     }
 
-    textFont("Montserrat");
-    // frameRate(20);
-
-    background(240);
-    let lw = floor(width / scl);
-    let lh = floor(height / scl);
-
-    scale(scl);
-    noStroke();
-    textAlign(CENTER, CENTER);
-    text("in:to", lw / 2, lh / 4);
-    text("in:to", lw / 2, lh / 2);
-    text("in:to", lw / 2, (lh / 4) * 3);
+    drawText();
 
     // noLoop();
 }
@@ -96,22 +105,13 @@ function draw() {
 
     // print(vs.length);
     fr.html(floor(frameRate()));
-    // zoff += inc;
+    zoff += inc;
 }
 
 function windowResized() {
     // pixelDensity(1);
     resizeCanvas(windowWidth, windowHeight);
-    background(240);
-    let lw = floor(width / scl);
-    let lh = floor(height / scl);
-
-    scale(scl);
-    noStroke();
-    textAlign(CENTER, CENTER);
-    text("in:to", lw / 2, lh / 4);
-    text("in:to", lw / 2, lh / 2);
-    text("in:to", lw / 2, (lh / 4) * 3);
+    drawText();
 }
 
 function test() {
