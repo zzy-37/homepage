@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    margin: 0;
+    background: rgb(240, 240, 240);
+}
+
+iframe {
+    position: absolute;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+}
+
+header {
+    flex: 1;
+    position: absolute;
+    padding-left: 1rem;
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    bottom: 0;
+}
+
+header p {
+    flex: 1;
+    border-left: 2px solid black;
+    padding-left: 1rem;
+    font-family: 'Noto Sans SC', sans-serif;
+    font-weight: 700;
+    font-size: 2vw;
+    transition: all 0.5s;
+}
+
+header p:hover {
+    background: black;
+    color: rgb(240, 240, 240);
+}
