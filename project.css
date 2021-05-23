@@ -1,0 +1,80 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 100vw;
+  background: rgb(240, 240, 240);
+
+  font-family: "Noto Sans SC", sans-serif;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  width: auto;
+  max-height: 100%;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+main > div {
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+  border-left: 2px solid black;
+  padding-left: 1rem;
+}
+
+.title h1 {
+  margin: 0;
+}
+
+.tags ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.tags li {
+  display: inline;
+  border-right: 2px solid black;
+  padding-right: 0.6em;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin-right: 0.5em;
+}
+
+.display {
+  height: 30vh;
+  display: flex;
+  overflow: auto;
+}
+
+.profile {
+  display: flex;
+  height: auto;
+}
+
+.profile img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.profile p {
+    margin: 0;
+    padding-left: 1em;
+    font-size: 0.8em;
+}
+
+.profile span {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+}
