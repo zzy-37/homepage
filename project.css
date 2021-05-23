@@ -56,6 +56,10 @@ main > div {
   overflow: auto;
 }
 
+.display img {
+    margin-right: 1rem;
+}
+
 .profile {
   display: flex;
   height: auto;
