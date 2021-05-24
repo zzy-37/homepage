@@ -105,8 +105,14 @@ main > div {
 .discription {
   flex: 1;
 }
+.discription p{
+  margin: 0;
+}
 
 .label {
   position: absolute;
   margin: 0;
+  padding-left: 1em;
+  font-size: 0.8em;
+  transform: translate(-3rem,0) rotate(90deg);
 }
