@@ -105,3 +105,8 @@ main > div {
 .discription {
   flex: 1;
 }
+
+.label {
+  position: absolute;
+  margin: 0;
+}
