@@ -48,6 +48,13 @@ section {
   padding-top: 0.2em;
   padding-bottom: 0.2em;
   margin-right: 0.5em;
+  transition: all 0.5s;
+}
+
+.tags li:hover {
+  background: black;
+  cursor: pointer;
+  color: rgb(240, 240, 240);
 }
 
 .display {
@@ -57,33 +64,44 @@ section {
 }
 
 .display img {
-    margin-right: 1rem;
+  margin-right: 1rem;
 }
 
 .profile {
   display: flex;
   height: auto;
+  flex: 1;
 }
 
 .profile img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
 }
 
 .profile p {
-    margin: 0;
-    padding-left: 1em;
-    font-size: 0.8em;
+  margin: 0;
+  padding-left: 1em;
+  font-size: 0.8em;
 }
 
 .profile span {
-    font-size: 1.5em;
-    margin-bottom: 0.5em;
-    font-weight: bold;
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+  font-weight: bold;
 }
 
-main>div {
-    display: flex;
-    flex-direction: column;
+main > div {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 600px) {
+  main > div {
+    flex-direction: row;
+  }
+}
+
+.discription {
+  flex: 1;
 }
