@@ -82,6 +82,7 @@ section {
 
 .display img {
   margin-bottom: 1rem;
+  width: 100%;
 }
 
 header {
@@ -112,11 +113,21 @@ header {
 }
 
 footer {
-  border-top: 1px solid black;
+  border-top: 2px solid lightgray;
   font-size: 0.6rem;
   padding: 0.6rem;
 }
 
 footer p {
   margin: 0;
+}
+
+@media (min-width:600px) {
+  main {
+    width: 600px;
+    margin: auto;
+  }
+  footer {
+    text-align: center;
+  }
 }
