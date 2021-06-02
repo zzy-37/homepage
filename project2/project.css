@@ -52,6 +52,7 @@ section {
   display: flex;
   height: auto;
   flex: 1;
+  align-items: center;
 }
 
 .profile img {
@@ -63,7 +64,7 @@ section {
 .profile p {
   margin: 0;
   padding-left: 1rem;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
 }
 
 .profile span {
@@ -112,9 +113,10 @@ header {
 
 footer {
   border-top: 1px solid black;
+  font-size: 0.6rem;
+  padding: 0.6rem;
 }
 
 footer p {
   margin: 0;
-  font-size: 0.5rem;
 }
