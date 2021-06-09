@@ -6,12 +6,18 @@ let pg;
 
 function setup() {
   // pixelDensity(1);
-  createCanvas(800, 800);
+  createCanvas(windowWidth, windowHeight);
   background(0);
 
   pg = createGraphics(width, height, WEBGL);
 
   drawDouble(200);
+}
+
+function windowResized() {
+  // pixelDensity(1);
+  resizeCanvas(windowWidth, windowHeight);
+  pg = createGraphics(width, height, WEBGL);
 }
 
 function draw() {
