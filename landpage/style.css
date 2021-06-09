@@ -25,36 +25,22 @@ main {
 }
 
 .entry {
-  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: larger;
   font-weight: bold;
   padding: 3rem;
-  background: radial-gradient(black, transparent 80%);
+  background: radial-gradient(black, transparent 40%);
   z-index: 1;
 }
 
-.motion {
-  width: 100%;
-  height: 100%;
-  transition: 0.5s;
-  position: absolute;
-}
-
-.title-top,
-.title-bottom {
-  position: absolute;
-}
-.title-top p,
-.title-bottom p {
+.title p {
   margin: 0;
   font-size: 1.5rem;
   font-weight: lighter;
 }
-.title-top p:first-child,
-.title-bottom p:first-child {
+.title p:first-child {
   font-weight: bolder;
 }
 
@@ -72,17 +58,7 @@ main {
   cursor: pointer;
 }
 
-#Input1:checked ~ .motion {
-  transform: translateY(100vh);
-}
-#Input1:checked ~ .tabs .tab {
-  transform: translateY(-100vh);
-}
-#Input1:checked ~ .tabs .tab > img {
-  transform: translateX(-100vw);
-}
-
-iframe {
+.motion {
   border: none;
   width: 100%;
   height: 100%;
@@ -99,7 +75,6 @@ iframe {
   border-bottom: 2px solid rgb(240, 240, 240);
   position: relative;
   top: 100vh;
-  transition: 0.8s ease-out;
   display: flex;
 }
 
@@ -113,24 +88,60 @@ iframe {
   margin-left: auto;
   position: relative;
   left: 100vw;
+}
+
+#Input1:checked ~ .entry,
+#Input1:checked ~ .motion {
+  opacity: 0;
+  visibility: hidden;
+}
+#Input1:checked ~ .title {
+  transform: translateY(100vh);
+  opacity: 0;
+  visibility: hidden;
+}
+#Input1:checked ~ .tabs .tab {
+  transform: translateY(-100vh);
+}
+#Input1:checked ~ .tabs .tab > img {
+  transform: translateX(-100vw);
+}
+
+.entry,
+.motion {
+  position: absolute;
+  transition: 1s; 
+}
+
+.title {
+  position: absolute;
   transition: 1s;
-  transition-delay: 1.2s;
+  transition-delay: 0.5s;
+}
+
+.tab {
+  transition: 0.8s ease-out;
 }
 
 .tab:nth-child(1) {
-  transition-delay: 0.6s;
+  transition-delay: 1.8s;
 }
 .tab:nth-child(2) {
-  transition-delay: 0.7s;
+  transition-delay: 2s;
 }
 .tab:nth-child(3) {
-  transition-delay: 0.8s;
+  transition-delay: 2.2s;
 }
 .tab:nth-child(4) {
-  transition-delay: 0.9s;
+  transition-delay: 2.4s;
 }
 .tab:nth-child(5) {
-  transition-delay: 1s;
+  transition-delay: 2.6s;
+}
+
+.tab img {
+  transition: 1s;
+  transition-delay: 3s;
 }
 
 @media (min-width: 600px) {
