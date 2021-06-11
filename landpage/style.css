@@ -102,8 +102,6 @@ header {
   border-bottom: 2px solid rgb(240, 240, 240);
   height: 20%;
   width: 100%;
-  position: relative;
-  top: 100vh;
   display: flex;
 }
 
@@ -118,8 +116,6 @@ header {
 
 .tab img {
   height: 100%;
-  position: relative;
-  left: 100vw;
   margin-left: auto;
 }
 
@@ -133,11 +129,11 @@ header {
   opacity: 0;
   visibility: hidden;
 }
-#Input1:checked ~ main .tab {
-  transform: translateY(-100vh);
+#Input1:not(:checked) ~ main .tab {
+  transform: translateY(100vh);
 }
-#Input1:checked ~ main .tab > img {
-  transform: translateX(-100vw);
+#Input1:not(:checked) ~ main .tab > img {
+  transform: translateX(100vw);
 }
 
 .entry,
