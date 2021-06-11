@@ -28,6 +28,7 @@ img {
 
 main {
   height: calc(100% - 4rem);
+  overflow: hidden;
 }
 
 .entry {
